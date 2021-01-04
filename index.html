@@ -123,11 +123,17 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 
 
-</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+</style><script role="script" id="twine-user-script" type="text/twine-javascript">var historybackward = document.getElementById("history-backward");
 
+function pauseallaudio(){
+	SimpleAudio.stop();
+}
 
+historybackward.addEventListener("click", pauseallaudio);
 
-
+$(window).on('beforeunload', function(){
+	Engine.restart();
+});
 
 
 
@@ -149,64 +155,75 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 </script><tw-passagedata pid="1" name="Титульник" tags="" position="412,187" size="100,100">!История одной песни
 &lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0002.jpg&quot; width=&quot;600&quot; height=&quot;300&quot; alt=&quot;Two foxes&quot;&gt;
 
-
-&lt;&lt;audio &quot;door-opens&quot; play loop&gt;&gt;
 [[Вступление]]
 
-*Если музыка не звучит (а она должна начать звучать сразу после перехода на страницу) — обновите страницу.</tw-passagedata><tw-passagedata pid="2" name="Вступление" tags="" position="410,312" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rabbit.jpg&quot; width=&quot;600&quot; alt=&quot;Кролик-убийца(нет)&quot;&gt;
+*Если музыка не звучит (а она должна начать звучать сразу после перехода на страницу) — обновите страницу.
+
+&lt;&lt;audio &quot;door-opens&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Вступление" tags="" position="410,312" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rabbit.jpg&quot; width=&quot;600&quot; alt=&quot;Кролик-убийца(нет)&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
- — Не пугайся, это просто Роджер. Замечательный кролик, жаль, что я его не увижу сейчас.
+«Не пугайся, это просто Роджер. Замечательный кролик, жаль, что я его не увижу сейчас».
 [[Далее|1]]
+&lt;&lt;stopallaudio&gt;&gt;
 &lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;
 </tw-passagedata><tw-passagedata pid="3" name="1" tags="" position="410,462" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
-«Здравствуй, мой преданный поклонник. Ты сейчас спишь и можешь спокойно проснуть, и в этом хорошая новость для тебя. Я вот проснуться не могу, и это плохая новость для меня».
+«Здравствуй, мой преданный поклонник. Ты сейчас спишь и можешь спокойно проснутьcя, и в этом хорошая новость для тебя. Я вот проснуться не могу, и это плохая новость для меня».
 
-[[Далее|2]] </tw-passagedata><tw-passagedata pid="4" name="2" tags="" position="410,612" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
+[[Далее|2]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="2" tags="" position="410,612" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Дело в том, что меня заточили во сне. Тёмные силы сделали это, чтобы я не мог подарить миру последнюю песню — последнюю для меня и группы. Она должна принести в этот мир покой и благоденствие, изменить человечество навсегда. Избавиться от меня они не смогли, но смогли заточить здесь».
 
-[[Далее|3]] </tw-passagedata><tw-passagedata pid="5" name="3" tags="" position="408,762" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
+[[Далее|3]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="5" name="3" tags="" position="407,763" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Поэтому большая удача, что тебя забросило сюда. Ты можешь пройти дорогой моих воспоминаний — путём, которым когда-то я ходил на репетицию к дому Степана — и отдать ему черновую запись песни. Он уже доведёт её до ума».
 
-[[Далее|4]] </tw-passagedata><tw-passagedata pid="6" name="4" tags="" position="410,912" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
+[[Далее|4]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="6" name="4" tags="" position="410,912" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Это не опасно для тебя. Да, возможно, ты пару раз умрёшь мучительной смертью, но это же сон, ты просто снова окажешься здесь. Ты поможешь мне,  пройдёшь тропой моих воспоминаний?»
 
 [[Да|5]]
-[[Нет|4.1]]</tw-passagedata><tw-passagedata pid="7" name="6" tags="" position="405,1185" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
+[[Нет|4.1]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="6" tags="" position="404,1184" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
-«Выходи за дверь. Я буду пытаться подсказывать тебе, правда, из-за того, что параллельно я буду сдерживать силы тьмы, они могут быть искажены. Ну, тут уж что умеем».
+«Выходи за дверь. Я буду пытаться подсказывать тебе, правда, из-за того, что параллельно я буду сдерживать силы тьмы, связь может быть искажена или даже пропасть. Ну, тут уж что умеем. Сейчас, как выйдешь, поверни налево, дойди до конца дома, ещё раз налево и прямо до рельс».
 
-[[Далее|7]]
-</tw-passagedata><tw-passagedata pid="8" name="5" tags="" position="400,1050" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-usb.jpg&quot; width=&quot;600&quot; alt=&quot;Кролик-убийца(нет)&quot;&gt;
+[[Хорошо|7]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="5" tags="" position="400,1050" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-usb.jpg&quot; width=&quot;600&quot; alt=&quot;Кролик-убийца(нет)&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Я знал, что не ошибался в тебе. Вот, держи эту флешку».
 
-[[Хорошо, что дальше?|6]]</tw-passagedata><tw-passagedata pid="9" name="4.1" tags="" position="613,925" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
+[[Хорошо, что дальше?|6]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="4.1" tags="" position="613,925" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Но почему? Ведь судьба всего мира зависит сейчас от ТЕБЯ! Неужели ты не хочешь спасти мир от бед и страданий?»
 
 [[Ну хорошо|5]]
-[[Нет, я не буду этого делать|4.2]]</tw-passagedata><tw-passagedata pid="10" name="4.2" tags="" position="613,1075" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
+[[Нет, я не буду этого делать|4.2]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="10" name="4.2" tags="" position="613,1075" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Не вынуждай меня прибегать к самому надёжному средству убеждения...»
 
 [[Ладно, давай свою запись|5]]
-[[Я не буду в это ввязываться|4.3]]</tw-passagedata><tw-passagedata pid="11" name="4.3" tags="" position="613,1225" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-krasavchik.jpg&quot; width=&quot;600&quot; alt=&quot;ОООО ДААА&quot;&gt;
+[[Я не буду в это ввязываться|4.3]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="11" name="4.3" tags="" position="613,1225" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-krasavchik.jpg&quot; width=&quot;600&quot; alt=&quot;ОООО ДААА&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Чтож, ты не оставил мне выбора».
 
-[[ААААА, НЕЕЕЕТ, МОИ ГЛАЗА! ХОРОШО, ХОРОШО, ДАВАЙ УЖЕ ФЛЕШКУ ИЛИ ЧТО ТАМ У ТЕБЯ|4.4]]</tw-passagedata><tw-passagedata pid="12" name="4.4" tags="" position="613,1375" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-krasavchik.jpg&quot; width=&quot;600&quot; alt=&quot;Кролик-убийца(нет)&quot;&gt;
+[[ААААА, НЕЕЕЕТ, МОИ ГЛАЗА! ХОРОШО, ХОРОШО, ДАВАЙ УЖЕ ФЛЕШКУ ИЛИ ЧТО ТАМ У ТЕБЯ|4.4]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="4.4" tags="" position="613,1375" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-krasavchik.jpg&quot; width=&quot;600&quot; alt=&quot;Кролик-убийца(нет)&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Да, я знаю, ни один добрый человек не в силах устоять перед моей красотой».
 
-[[Далее|5]]</tw-passagedata><tw-passagedata pid="13" name="7" tags="" position="405,1335" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
+[[Далее|5]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="7" tags="" position="405,1335" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Вперёд и удачи! Давай, сделай это! Судьбы мира зависят от тебя!»
 
-[[Далее|8]]</tw-passagedata><tw-passagedata pid="14" name="8" tags="" position="406,1454" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0002.jpg&quot; width=&quot;600&quot; alt=&quot;001&quot;&gt;
+[[Далее|8 выход на дорогу]]
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="8 выход на дорогу" tags="" position="406,1454" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0002.jpg&quot; width=&quot;600&quot; alt=&quot;001&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Эх, те самые рельсы, по которым тогда ещё иногда ходил поезд... Прямо через Нижнюю зону Академгородка... Полное мистики и романтики место».
 
@@ -214,11 +231,14 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 [[Налево|9.1]]
 [[Прямо|9.2]]
-[[Направо|9]]</tw-passagedata><tw-passagedata pid="15" name="9" tags="" position="406,1604" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0003.jpg&quot; width=&quot;600&quot; alt=&quot;0003&quot;&gt;
+[[Направо|9]]
+&lt;&lt;masteraudio stop&gt;&gt;
+&lt;&lt;audio &quot;road&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="9" tags="" position="406,1604" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0003.jpg&quot; width=&quot;600&quot; alt=&quot;0003&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Неплохо, именно таким путём мы сами и шли! Давай дальше».
 
-[[Далее|10]]</tw-passagedata><tw-passagedata pid="16" name="9.1" tags="" position="286,1604" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0002-otello.jpg&quot; width=&quot;600&quot; alt=&quot;Отелло&quot;&gt;
+[[Далее|10]]
+&lt;&lt;audio &quot;road&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="9.1" tags="" position="286,1604" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0002-otello.jpg&quot; width=&quot;600&quot; alt=&quot;Отелло&quot;&gt;
 
 &#39;&#39;Роза:&#39;&#39;
 Ну вот! Ходить налево нехорошо, даже если налево это ко мне. Поверь, стоит или дорожить отношениями, или отказаться от них. В общем, тебя убил призрак Отелло за то, что ты пошёл налево. Не любит он таких людей.
@@ -229,7 +249,8 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 &#39;&#39;Роза:&#39;&#39;
 Никому ещё не шла столь излишняя прямота. Ты угодил в сети Магнита. Сначала купил пирожное по акции, потом остался выбрать пакет пельменей, да так и провёл остаток жизни в этом золостном супермаркете.
 
-[[Воскресаем]]</tw-passagedata><tw-passagedata pid="18" name="10" tags="" position="406,1754" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0004a.jpg&quot; width=&quot;600&quot; alt=&quot;0004&quot;&gt;
+[[Воскресаем]]
+&lt;&lt;audio &quot;road&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="10" tags="" position="406,1754" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0004a.jpg&quot; width=&quot;600&quot; alt=&quot;0004&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Эх, рельсы юности моей...» 
 
@@ -237,10 +258,14 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 
 [[Направо, по лестнице|10-право]]
 [[Прямо, по рельсам|10-прямо]]
-[[Налево|11]]</tw-passagedata><tw-passagedata pid="19" name="Воскресаем" tags="" position="240,1320" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
+[[Налево|11]]
+&lt;&lt;audio &quot;road&quot; play loop&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Воскресаем" tags="" position="240,1320" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/0001-rozadoma2.jpg&quot; width=&quot;600&quot; alt=&quot;Няшный Роза&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Ничего, ошибки у всех бывают, самое время попробовать ещё раз!»
-[[Далее|7]]</tw-passagedata><tw-passagedata pid="20" name="10-право" tags="" position="256,1904" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/smertvlesu.jpg&quot; width=&quot;600&quot; alt=&quot;0005&quot;&gt;
+[[Далее|7]]
+&lt;&lt;masteraudio stop&gt;&gt;
+&lt;&lt;audio &quot;goodroza&quot; play loop&gt;&gt;
+</tw-passagedata><tw-passagedata pid="20" name="10-право" tags="" position="256,1904" size="100,100">&lt;img src=&quot;http://gruppa.utkorose.ru/winter-quest/img/smertvlesu.jpg&quot; width=&quot;600&quot; alt=&quot;0005&quot;&gt;
 &#39;&#39;Роза:&#39;&#39;
 «Ну ты чего? Это же поворот обратно к дому, в котором я жил когда-то и ходил на репетиции. Да ещё и через Чербузы.В общем, ты заблудился в окружающих Чербузы кустах и отправился на Чербузы. Давай, воскресай поскорее.»»
 
@@ -349,6 +374,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 &lt;&lt;cacheaudio &quot;door-opens&quot; &quot;https://gruppa.utkorose.ru/winter-quest/audio/Metaphysics.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;road&quot; &quot;https://gruppa.utkorose.ru/winter-quest/audio/Ressha.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;goodroza&quot; &quot;https://gruppa.utkorose.ru/winter-quest/audio/19.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;smert&quot; &quot;https://gruppa.utkorose.ru/winter-quest/audio/Uchuu.mp3&quot;&gt;&gt;
 
 [[Далее|Титульник]] </tw-passagedata><tw-passagedata pid="43" name="25" tags="" position="205,4051" size="100,100">&lt;img src=&quot;https://gruppa.utkorose.ru/winter-quest/img/0017.jpg&quot; width=&quot;600&quot; alt=&quot;0017&quot;&gt;
 
